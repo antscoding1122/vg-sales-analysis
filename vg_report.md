@@ -89,6 +89,8 @@ To prepare the raw Video Games Sales dataset for SQL querying and PowerBI/Tablea
 *   **Mathematical Cross-Validation:** Verified the internal arithmetic accuracy of reported gross sales using an absolute-difference verification formula:
     
     $$\text{Validation Check} = \text{IF}\left(\text{ABS}\left(\text{total\_sales} - \left(\text{na\_sales} + \text{jp\_sales} + \text{pal\_sales} + \text{other\_sales}\right)\right) < 0.5, \text{"Valid"}, \text{"Mismatch"}\right)$$
+
+    Validation Check = IF(ABS(total_sales − (na_sales+jp_sales+pal_sales+other_sales)) < 0.5, "Valid" , "Mismatch")
     
     The audit confirmed 100% mathematical consistency across all regional sales breakdowns.
 *   **Deduplication Audit:** Executed a multi-field count check (`=COUNTIFS(title, A2, console, B2, release_date, C2)`) to identify duplicate game releases, successfully purging identical records matching on title, console, and release date.
@@ -149,6 +151,8 @@ To prevent statistical distortion during analytical SQL modeling, missing values
 *   **Vectorized Arithmetic Verification:** Verified cross-column financial integrity by comparing reported total revenue against the sum of regional metrics using row-wise vector addition:
 
 $$\text{Discrepancies} = \left(\left\vert{} \text{total\_sales} - \sum \text{regional\_sales} \right\vert{} < 0.5 \right)$$
+
+Discrepancies = ( total_sales − ∑regional_sales < 0.5)
 
 ---
 
@@ -348,7 +352,7 @@ The below details my process of constructing the Tableau dashboard.
 
 Link to Tableau Dashboard: https://public.tableau.com/views/vgsales_17878442519720/Dashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
-![Tableau Dashboard](dashboard.png)
+![Tableau Dashboard](images/dashboard.png)
 
 
 ### 1. Data Manipulation
@@ -386,19 +390,19 @@ Synthesizing SQL queries and Tableau dashboard visualizations provides data-driv
 #### SQL Query & Dashboard Evidence
 * **Ecosystem Reach:** The *Hardware Distribution Pie Chart* shows **Sony PlayStation** leads global software volume ($13,027M / 49.37% share), followed by **Nintendo** ($6,173M / 23.39%) and **Xbox** ($5,442M / 20.62%).
 
-![Hardware Distribution Pie Chart](hardware_distribution_pie.png) 
+![Hardware Distribution Pie Chart](images/hardware_distribution_pie.png) 
 
 * **Genre Sales:** Query 3 from the SQL section above about Hardware Ecosystem Specialization by Genre show that the **Action**, **Sports**, and **Shooter** genres generate peak console sales.
 
-![Xbox Genre Sales](genre_xbox.png) 
+![Xbox Genre Sales](images/genre_xbox.png) 
 
-![Playstation Genre Sales](genre_playstation.png)
+![Playstation Genre Sales](images/genre_playstation.png)
 
-![Nintendo Genre Sales](genre_nintendo.png)
+![Nintendo Genre Sales](images/genre_nintendo.png)
 
 * **Additional Filtering:** Through additional filtering on my Tableau dashboard, I filtered on just Microsoft Xbox under the Hardware Ecosystem filter, which showed me that there's relatively few Xbox sales in Japan.
 
-![Xbox's Regional Demand](regional_demand_xbox.png)
+![Xbox's Regional Demand](images/regional_demand_xbox.png)
 
 ### Executive Recommendation: 
 
@@ -417,13 +421,13 @@ Deploy the $100M budget across these 3 strategic areas to make use of the analys
 
 * **Context:** The Regional Demand Pie Chart shows North America (50.72%) and Europe (29.05%) make up 79.77% of global sales, favoring Action ($931.21M combined), Sports ($947.78M), and Shooters ($852.94M).
 
-![Regional Demand](regional_demand.png)
+![Regional Demand](images/regional_demand.png)
 
-![Total Sales vs. Release Year](sales_vs_year.png)
+![Total Sales vs. Release Year](images/sales_vs_year.png)
 
 * **Most Popular Genres in Japan:** Query 6 from the SQL section above about Regional Market Sales by Genre shows that in Western Markets like **North America (NA) and Europe (PAL): Action, Sports, and Shooter are the most popular genres**. **In Japan's markets: Role-Playing, Fighting, and Strategy are the most popular genres**.
 
-![Regional Market Sales by Genre](regional_market_sales.png)
+![Regional Market Sales by Genre](images/regional_market_sales.png)
 
 * **Additional Note:** I checked how Regional Market Sales may vary by Hardware Ecosystem, and I didn't find much variance. The only thing I found was already stated above, which is that there's few Xbox sales in Japan.
 
