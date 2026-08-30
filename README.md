@@ -26,6 +26,30 @@ The dashboard allows users to explore video game sales by:
 
 ---
 
+## 📑 Table of Contents
+
+- [🎯 Project Overview](#-project-overview)
+- [🛠️ Tools & Technologies](#️-tools--technologies)
+- [🔄 Analysis Workflow](#-analysis-workflow)
+- [🧹 Data Cleaning](#-data-cleaning)
+- [🔎 SQL Analysis](#-sql-analysis)
+- [📈 Key Findings](#-key-findings)
+  - [Sony PlayStation Leads Overall Recorded Sales](#1-sony-playstation-leads-overall-recorded-sales)
+  - [Genre Preferences Differ Across Regions](#2-genre-preferences-differ-across-regions)
+  - [Critical Reception Is Associated With Higher Average Sales](#3-critical-reception-is-associated-with-higher-average-sales)
+  - [Recorded Sales Peaked Around 2008](#4-recorded-sales-peaked-around-2008)
+- [💼 Business Recommendations](#-business-recommendations)
+  - [Platform & Product Strategy](#platform--product-strategy)
+  - [Japanese Market Expansion](#japanese-market-expansion)
+- [⚠️ Data Limitations](#️-data-limitations)
+- [📁 Repository Structure](#-repository-structure)
+- [📚 Project Documentation](#-project-documentation)
+- [🚀 What I Learned](#-what-i-learned)
+- [🔮 Future Improvements](#-future-improvements)
+- [👤 Author](#-author)
+
+---
+
 # 🎯 Project Overview
 
 This project analyzes a dataset of more than **60,000 video game records released between 1971 and 2024**.

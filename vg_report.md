@@ -9,11 +9,35 @@ This report details the data cleaning, exploration, analysis, and visualization 
 
 
 ## Table of Contents
-* **0. My Exprience/Thoughts Through This Project**
-* **1. Data Cleaning and Exploration**
-* **2. Analytical SQL Engineering & Query Architecture**
-* **3. Data Visualization - Tableau Dashboard**
-* **4. Strategic Business Answers & SQL/Visualization Synthesis**
+
+- [0. My Experience/Thoughts Throughout This Project](#0-my-experiencethoughts-throughout-this-project)
+- [1. Data Cleaning and Exploration](#1-data-cleaning-and-exploration)
+  - [(Excel)](#excel)
+    - [Phase 1: Schema Setup & Metadata Auditing](#phase-1-schema-setup--metadata-auditing)
+    - [Phase 2: Integrity Validation & Text Standardization](#phase-2-integrity-validation--text-standardization)
+    - [Phase 3: Missing Value Strategy & Audit Summary](#phase-3-missing-value-strategy--audit-summary)
+  - [(Pandas)](#pandas)
+    - [Phase 1: Exploratory Data Analysis & Schema Diagnostics](#phase-1-exploratory-data-analysis--schema-diagnostics)
+    - [Phase 2: Programmatic Cleansing & Vectorized Transformations](#phase-2-programmatic-cleansing--vectorized-transformations)
+    - [Phase 3: Missing Value Engineering & Vectorized Logic Validation](#phase-3-missing-value-engineering--vectorized-logic-validation)
+  - [Conclusion of Cleaned Dataset (Pandas)](#conclusion-of-cleaned-dataset-pandas)
+- [2. Analytical SQL Engineering & Query Architecture](#2-analytical-sql-engineering--query-architecture)
+  - [Query 1: Top 10 Software Releases Worldwide](#query-1-top-10-software-releases-worldwide)
+  - [Query 2: Industry Temporal Growth & Annual Sales Trends](#query-2-industry-temporal-growth--annual-sales-trends)
+  - [Query 3: Hardware Ecosystem Specialization by Genre](#query-3-hardware-ecosystem-specialization-by-genre)
+  - [Query 4: Regional Market Divergence (Japanese Regional Favorites)](#query-4-regional-market-divergence-japanese-regional-favorites)
+  - [Query 5: Critical Acclaim vs. Commercial Impact](#query-5-critical-acclaim-vs-commercial-impact)
+  - [Query 6: Regional Preference Index by Genre](#query-6-regional-preference-index-by-genre)
+  - [Query 7: Publisher Portfolio Efficiency](#query-7-publisher-portfolio-efficiency)
+  - [Query 8: Hardware Ecosystem Comparison](#query-8-hardware-ecosystem-comparison)
+- [3. Data Visualization - Tableau Dashboard](#3-data-visualization---tableau-dashboard)
+  - [1. Data Manipulation](#1-data-manipulation)
+  - [2. Worksheet Design & Visualization Strategy](#2-worksheet-design--visualization-strategy)
+- [4. Strategic Business Answers & SQL/Visualization Synthesis](#4-strategic-business-answers--sqlvisualization-synthesis)
+  - [Core Question: Product Strategy & Platform Selection ($100M Capital Deployment)](#core-question-product-strategy--platform-selection-100m-capital-deployment)
+  - [Expansion Question: Audience & Regional Localization](#expansion-question-audience--regional-localization)
+- [End of the Report!!!](#end-of-the-report)
+
 
 
 ## 0. My Experience/Thoughts Throughout This Project
